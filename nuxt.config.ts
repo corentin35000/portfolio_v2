@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     builder: 'vite',
     ssr: true,
     modules: [
+        '@nuxtjs/robots',
         '@nuxtjs/sitemap' // ! Déclarez toujours le module sitemap à la fin du tableau !
     ],
     sitemap: {
