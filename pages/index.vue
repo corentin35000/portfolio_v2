@@ -1,12 +1,14 @@
 <template>
-  INDEX VIEW
+  <main>
+      INDEX VIEW
+  </main>
 </template>
 
 <script lang="ts">
   export default {
     setup() {
       useHead({
-        title: 'TEST',
+        title: 'Portfolio',
       })
     }
   }
