@@ -7,17 +7,33 @@
 
     <div>
       <ul id="menu">
-        <li>Home</li>
-        <li>Work</li>
-        <li>Contact</li>
+        <li>
+          <a href="">Home</a>
+        </li>
+        <li>
+          <a href="">Work</a>
+        </li>
+        <li>
+          <a href="">Contact</a>
+        </li>
       </ul>
-      <img id="menuImage" src="/assets/images/menu.svg"  alt="" />
-    </div>
-
-    <div id="menuOpen">
-
+      <img id="menuImage" @click="openMenu = !openMenu" src="/assets/images/menu.svg" alt="" />
     </div>
   </nav>
+
+  <div id="menuOpen" v-if="openMenu">
+    <ul>
+      <li>
+        <a href="">Home</a>
+      </li>
+      <li>
+        <a href="">Work</a>
+      </li>
+      <li>
+        <a href="">Contact</a>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script lang="ts">
@@ -25,18 +41,47 @@
     components: true,
     data() {
       return {
+        openMenu: false
       }
     },
   }
 </script>
 
 <style lang="scss" scoped>
+  #menuImage {
+    cursor: pointer;
+  };
+
+  #menu li a {
+    color: white;
+    text-decoration: none;
+  }
+  #menu li a:hover {
+    cursor: pointer;
+  }
+
   #menuOpen {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
+    background-color: #323232;
+    text-align: center;
+    font-size: 18px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      li {
+        padding: 10px 0;
+        color: white;
+        border-top: 1px solid #696969;
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+
+  #menuOpen ul li:hover {
+    cursor: pointer;
   }
 
   nav {
@@ -80,12 +125,12 @@
     #menuImage {
       display: none;
     };
+    #menuOpen {
+      display: none;
+    }
   }
 
   @media (min-width: 950px) {
-    #menuOpen {
-      display: unset;
 
-    }
   }
 </style>

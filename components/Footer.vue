@@ -41,8 +41,6 @@
       justify-content: space-between;
       align-items: center;
       padding: 50px 100px;
-      position: fixed;
-      bottom: 0;
     }
 
     footer p {

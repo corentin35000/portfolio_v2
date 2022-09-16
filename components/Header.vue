@@ -3,7 +3,7 @@
     <Nav />
 
     <div class="container">
-      <img id="visage" src="/assets/images/header_visage.png" alt="" width="240" height="240" />
+      <img data-aos="flip-left" id="visage" src="/assets/images/header_visage.png" alt="" width="240" height="240" />
 
       <div class="col">
         <p id="name">Entreprise en développement informatique.</p>

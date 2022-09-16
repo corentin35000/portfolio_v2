@@ -21,7 +21,7 @@ export default defineNuxtConfig({
         /* module options */
     },
     css: [
-        '@/assets/css/style.scss'
+        '@/public/assets/css/style.scss'
     ],
     head: {
         meta: [
